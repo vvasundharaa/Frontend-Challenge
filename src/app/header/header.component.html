@@ -1,0 +1,16 @@
+<div class="header-container">
+  <div class="logo">
+    <img src="../../assets/img/turbo-modus-logo.png" alt="" />
+  </div>
+  @if(isUserLogin()){
+  <div class="nav-links">
+    @if(userName() !== null){
+    <span>{{ userName() }}</span>
+    }
+  </div>
+  } @else {
+  <div class="nav-links">
+    <a [routerLink]="['/login']">Login</a>
+  </div>
+  }
+</div>
